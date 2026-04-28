@@ -368,131 +368,19 @@
  Tous les champs marqués d'un <span style="color:var(--gold)">*</span> sont obligatoires.
     </p>
   </header>
-  <!-- Form card -->
-  <div class="form-card">
-    <form id="candidature-form" action="https://formspree.io/f/xlgakgvb" method="POST" novalidate>
-
-      <!-- Section 1: Candidat -->
-      <div class="form-section">
-        <h2 class="section-title"><span class="num">01</span> Informations personnelles</h2>
-
-        <div class="field-row">
-          <div class="field">
-            <label>Prénom <span class="req">*</span></label>
-            <!-- Champs cachés Formspree -->
-          <input type="hidden" name="_subject" value="Nouvelle candidature – Prix API SAMBA">
-          <input type="text" name="_gotcha" style="display:none">
-          <input type="hidden" name="_next" value="">
-          <input type="text" name="prenom" placeholder="Junior" required>
-          </div>
-          <div class="field">
-            <label>Nom <span class="req">*</span></label>
-            <input type="text" name="nom" placeholder="Mabika" required>
-          </div>
-        </div>
-
-        <div class="field-row">
-          <div class="field">
-            <label>Adresse e-mail <span class="req">*</span></label>
-            <input type="email" name="email" placeholder="junior@exemple.fr" required>
-          </div>
-          <div class="field">
-            <label>Téléphone</label>
-            <input type="tel" name="telephone" placeholder="+241 6 00 00 00 00">
-          </div>
-        </div>
-         
-        </div>
-      <!-- Section 2: Projet -->
-      <div class="form-section">
-        <h2 class="section-title"><span class="num">02</span> Présentation du projet</h2>
-
-        <div class="field-row full field" style="margin-top:20px">
-          <label>Résumé du projet <span class="req">*</span></label>
-          <textarea name="resume" placeholder="Décrivez votre projet en quelques phrases (250 mots maximum)…" required></textarea>
-          <span class="field-hint">250 mots maximum</span>
-        </div>
-      </div>
-
-      <!-- Section 3: Documents -->
-      <div class="form-section">
-        <h2 class="section-title"><span class="num">03</span> Documents du dossier</h2>
-
-        <p style="font-size:0.82rem; color:var(--warm-gray); line-height:1.8; margin-bottom:28px;">
-          Votre dossier doit comprendre les pièces ci-dessous. Les champs marqués <span style="color:var(--gold)">*</span> sont obligatoires.
-        </p>
-
-        <div class="field" style="margin-bottom:20px">
-          <label>Lettre de motivation <span class="req">*</span></label>
-          <div class="file-upload">
-            <input type="file" name="lettre_motivation" accept=".pdf,.doc,.docx" required>
-            <div class="file-upload-icon">✉️</div>
-            <p><strong>Déposer la lettre de motivation</strong><br><span style="font-size:0.72rem">PDF, DOC, DOCX — 5 Mo maximum</span></p>
-          </div>
-        </div>
-
-        <div class="field" style="margin-bottom:20px">
-          <label>Pièce d'identité <span class="req">*</span></label>
-          <div class="file-upload">
-            <input type="file" name="piece_identite" accept=".pdf,.jpg,.jpeg,.png" required>
-            <div class="file-upload-icon">🪪</div>
-            <p><strong>Carte nationale d'identité ou passeport</strong><br><span style="font-size:0.72rem">PDF, JPG, PNG — 5 Mo maximum</span></p>
-          </div>
-        </div>
-
-        <div class="field" style="margin-bottom:20px">
-          <label>Statuts de l'entreprise</label>
-          <div class="file-upload">
-            <input type="file" name="statuts" accept=".pdf,.doc,.docx">
-            <div class="file-upload-icon">🏢</div>
-            <p><strong>Statuts de l'entreprise</strong><br><span style="font-size:0.72rem">Le cas échéant — PDF, DOC, DOCX — 10 Mo maximum</span></p>
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Documents justificatifs complémentaires</label>
-          <div class="file-upload">
-            <input type="file" name="documents_complementaires" accept=".pdf,.doc,.docx,.jpg,.png,.zip" multiple>
-            <div class="file-upload-icon">📎</div>
-            <p><strong>Tout document justifiant vos démarches</strong><br>Démarches administratives engagées, création ou projet de création d'entreprise…<br><span style="font-size:0.72rem">Plusieurs fichiers acceptés — PDF, DOC, JPG, ZIP — 20 Mo maximum</span></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 4: Consentement -->
-      <div class="form-section">
-        <h2 class="section-title"><span class="num">04</span> Consentement &amp; déclaration</h2>
-
-        <div style="display:flex; flex-direction:column; gap:14px">
-          <div class="checkbox-field">
-            <input type="checkbox" name="exactitude" required id="chk1">
-            <span><label for="chk1">Je certifie que les informations fournies sont exactes et complètes. <span class="req">*</span></label></span>
-          </div>
-          <div class="checkbox-field">
-            <input type="checkbox" name="rgpd" required id="chk2">
-            <span><label for="chk2">J'accepte que mes données soient utilisées dans le cadre du traitement de ma candidature, conformément à notre <a href="#">politique de confidentialité</a>. <span class="req">*</span></label></span>
-          </div>
-          <div class="checkbox-field">
-            <input type="checkbox" name="newsletter" id="chk3">
-            <span><label for="chk3">Je souhaite recevoir les actualités et prochains appels à candidatures de l'association.</label></span>
-          </div>
-        </div>
-      </div>
-</div>
-      <!-- Submit -->
-      <div class="submit-wrap">
-        <button type="submit" class="btn-submit"><span>Soumettre ma candidature</span></button>
-        <p class="submit-note">Un accusé de réception vous sera envoyé par e-mail</p>
-      </div>
-
-    </form>
-
-    <!-- Success message -->
-    <div class="success-overlay" id="success">
-      <div class="success-icon">✦</div>
-      <h2>Candidature envoyée !</h2>
-      <p>Merci pour votre dossier de candidature au <strong>Prix API SAMBA</strong>.<br>Vous recevrez un accusé de réception sous 24&nbsp;h à l'adresse <strong>info-api@gmail.com</strong>.<br><br>La remise du prix aura lieu lors de la conférence du <strong>Samedi 06 juin à 14h</strong><br>au <strong>ABC Mall au Charbonnage</strong>.<br>Entrée gratuite.</p>
-    </div>
+  <!-- Formulaire Tally intégré -->
+  <div class="form-card" style="padding:0; overflow:hidden;">
+    <iframe
+      data-tally-src="https://tally.so/embed/VL9qOJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="500"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="Formulaire de candidature – Prix API SAMBA"
+      style="display:block; border:none;"
+    ></iframe>
   </div>
 
   <!-- Affiche & Infos événement -->
@@ -583,55 +471,7 @@
   <footer>© 2026 — Acteurs Politiques Indépendants (API) · info-api@gmail.com · +33 667 38 16 30</footer>
 </div>
 
-<script>
-  // File upload label update
-  document.querySelectorAll('.file-upload input[type="file"]').forEach(input => {
-    input.addEventListener('change', function () {
-      const p = this.closest('.file-upload').querySelector('p');
-      if (this.files[0]) {
-        p.innerHTML = `<strong>${this.files[0].name}</strong><br><span style="font-size:0.72rem;color:var(--gold)">Fichier sélectionné ✓</span>`;
-      }
-    });
-  });
 
-  // Soumission via Formspree
-  document.getElementById('candidature-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    if (!this.checkValidity()) {
-      this.reportValidity();
-      return;
-    }
-    const btn = this.querySelector('.btn-submit');
-    const btnSpan = btn.querySelector('span');
-    btn.disabled = true;
-    btnSpan.textContent = 'Envoi en cours…';
-
-    const formData = new FormData(this);
-
-    try {
-      const response = await fetch('https://formspree.io/f/xlgakgvb', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        this.style.display = 'none';
-        document.getElementById('success').classList.add('visible');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        const data = await response.json();
-        btnSpan.textContent = 'Soumettre ma candidature';
-        btn.disabled = false;
-        const msg = data.errors ? data.errors.map(e => e.message).join(', ') : 'Une erreur est survenue. Veuillez réessayer.';
-        alert('Erreur : ' + msg);
-      }
-    } catch (err) {
-      btnSpan.textContent = 'Soumettre ma candidature';
-      btn.disabled = false;
-      alert('Erreur de connexion. Vérifiez votre connexion internet et réessayez.');
-    }
-  });
-</script>
+  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </body>
 </html>
